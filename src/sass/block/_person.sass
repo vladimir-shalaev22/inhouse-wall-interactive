@@ -1,0 +1,34 @@
+.person
+  position: absolute
+  right: 0
+  bottom: 0
+  &__info
+    position: absolute
+    right: 460px
+    bottom: 130px
+    width: 230px
+  &__image
+    position: absolute
+    display: block
+    right: -102px
+    bottom: 0
+  &__name
+    position: relative
+    color: #404040
+    font-size: 18px
+    font-weight: 600
+    line-height: 1.1
+    &::after
+      position: absolute
+      display: block
+      content: ' '
+      width: 253px
+      height: 2px
+      left: 1px
+      bottom: -6px
+      background-image: linear-gradient(193deg, #009896 0%, #009f62 100%)
+  &__about
+    margin-top: 10px
+    font-size: 14px
+    font-weight: 400
+    line-height: 23px
