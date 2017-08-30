@@ -1,16 +1,30 @@
 .test-result
-  margin: 90px auto 0
+  margin: 9.375% auto 0
   position: relative
-  width: 1140px
+  width: 100%
   background: #fff
-  padding: 45px 60px
+  max-width: 1140px
+  padding: 25px 15px
   text-align: center
   box-sizing: border-box
   box-shadow: -2px 1px 9px rgba(0, 0, 0, 0.24)
+  @media screen and (min-width: 800px)
+    padding: 45px 60px
+  @media screen and (min-width: 960px)
+    margin: 90px auto 0
   &__heading
     color: #303030
-    font-size: 34px
+    font-size: 22px
     font-weight: 500
-    line-height: 38px
+    line-height: 1.5
+    br
+      display: none
+    @media screen and (min-width: 620px)
+      font-size: 26px
+      line-height: 1.1
+      br
+        display: block
+    @media screen and (min-width: 860px)
+      font-size: 34px
   &__inner
     overflow-x: auto

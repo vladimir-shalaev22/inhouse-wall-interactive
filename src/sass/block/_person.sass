@@ -1,17 +1,32 @@
 .person
-  position: absolute
-  right: 0
-  bottom: 0
-  &__info
+  position: relative
+  text-align: center
+  @media screen and (min-width: 1140px)
     position: absolute
-    right: 460px
-    bottom: 130px
-    width: 230px
-  &__image
-    position: absolute
-    display: block
-    right: -102px
+    text-align: left
+    right: 0
     bottom: 0
+  &__info
+    margin-top: 30px
+    @media screen and (min-width: 1140px)
+      position: absolute
+      margin-top: 0
+      right: 460px
+      bottom: 130px
+      width: 230px
+  &__image
+    max-width: 300px
+    display: block
+    margin: 0 auto
+    width: 90%
+    border-radius: 50%
+    @media screen and (min-width: 1140px)
+      position: absolute
+      max-width: none
+      width: auto
+      right: -102px
+      bottom: 0
+      border-radius: 0
   &__name
     position: relative
     color: #404040
@@ -20,13 +35,15 @@
     line-height: 1.1
     &::after
       position: absolute
-      display: block
+      display: none
       content: ' '
       width: 253px
       height: 2px
       left: 1px
       bottom: -6px
       background-image: linear-gradient(193deg, #009896 0%, #009f62 100%)
+      @media screen and (min-width: 1140px)
+        display: block
   &__about
     margin-top: 10px
     font-size: 14px

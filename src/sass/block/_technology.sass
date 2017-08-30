@@ -1,23 +1,35 @@
 .technology
   position: relative
-  margin-top: 140px
+  margin-top: 14.5833%
   text-align: center
+  @media screen and (min-width: 960px)
+    margin-top: 140px
+  &__title
+    width: 76.1458%
+    max-width: 731px
   &::before
     position: absolute
     display: block
     content: ' '
     left: 50%
-    top: -37px
-    width: 300px
+    top: -28.4615%
+    width: 31.25%
     height: 1px
+    max-width: 300px
     transform: translateX(-50%)
     background: linear-gradient(to right, #009896, #009f62)
+    @media screen and (min-width: 960px)
+      top: -37px
   &__more
     display: inline-block
-    margin-top: 30px
+    margin-top: 3.125%
     color: #303030
-    font-size: 14px
-    line-height: 28px
+    font-size: 10px
+    line-height: 2
     font-weight: 600
     text-transform: uppercase
     border-bottom: 1px dashed #009a82
+    @media screen and (min-width: 600px)
+      font-size: 14px
+    @media screen and (min-width: 960px)
+      margin-top: 30px
