@@ -1,7 +1,17 @@
 .sub-heading
   margin-top: 13px
+  padding: 0 20px
   color: #303030
-  font-size: 28px
-  line-height: 35px
+  font-size: 18px
+  line-height: 1.25
   text-align: center
   font-family: 'Roboto Slab', sans-serif
+  br
+    display: none
+  @media screen and (min-width: 500px)
+    br
+      display: block
+  @media screen and (min-width: 680px)
+    font-size: 22px
+  @media screen and (min-width: 960px)
+    font-size: 28px

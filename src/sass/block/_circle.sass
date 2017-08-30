@@ -1,54 +1,81 @@
 .circle
-  position: relative
+  width: 100%
+  max-width: 370px
+  box-sizing: border-box
+  padding: 0 15px
   margin: 34px auto 0
-  width: 607px
-  height: 607px
-  &__image
+  height: 1030px
+  @media screen and (min-width: 630px)
+    height: 705px
+  @media screen and (min-width: 900px)
+    height: auto
+  @media screen and (min-width: 960px)
+    margin: 34px 310px 0
+    width: auto
+    max-width: 607px
+    padding: 0
+  @media screen and (min-width: 1227px)
+    margin: 34px auto 0
+    width: 51.65%
+  &__inner
     position: relative
-    left: 12px
-    margin-top: 47px
+    width: 100%
+    padding: 50% 0
+    @media screen and (min-width: 960px)
+      padding: 50% 0
+  &__image
+    position: absolute
+    width: 88.4678%
+    height: 84.0197%
+    left: 7.7429%
+    top: 7.7429%
+    @media screen and (min-width: 960px)
+      width: 88.4678%
+      height: 84.0197%
+      left: 7.7429%
+      top: 7.7429%
   &__outline
     position: absolute
     left: 0
     top: 0
     display: block
-    width: 607px
-    height: 607px
+    width: 100%
+    height: 100%
     box-sizing: border-box
     border: 2px solid #71655d
     border-radius: 50%
   &__item
     position: absolute
     &:nth-child(1)
-      top: 50px
-      right: 464px
+      top: 8.2372%
+      right: 76.4415%
     &:nth-child(2)
-      top: 31px
-      left: 461px
+      top: 5.1070%
+      left: 75.9472%
     &:nth-child(3)
-      top: 153px
-      right: 550px
+      top: 25.2059%
+      right: 90.6095%
     &:nth-child(4)
-      top: 143px
-      left: 547px
+      top: 23.5584%
+      left: 90.1153%
     &:nth-child(5)
-      top: 286px
-      right: 580px
+      top: 47.1169%
+      right: 95.5518%
     &:nth-child(6)
-      top: 286px
-      left: 579px
+      top: 47.1169%
+      left: 95.3871%
     &:nth-child(7)
-      top: 420px
-      right: 550px
+      top: 69.1927%
+      right: 90.6095%
     &:nth-child(8)
-      top: 410px
-      left: 547px
+      top: 67.5453%
+      left: 90.1153%
     &:nth-child(9)
-      top: 525px
-      right: 464px
+      top: 86.4909%
+      right: 76.4415%
     &:nth-child(10)
-      top: 515px
-      left: 461px
+      top: 84.8434%
+      left: 75.9472%
   &__icon
     position: absolute
     top: 50%
@@ -108,8 +135,10 @@
     display: block
     min-width: 400px
     color: #303030
-    font-size: 17px
+    font-size: 14px
     font-weight: 500
+    @media screen and (min-width: 1050px)
+      font-size: 17px
   &__item:nth-child(2n-1) &__link
     margin-right: 74px
   &__item:nth-child(2n) &__link
@@ -157,22 +186,29 @@
     margin-top: 13px
     left: 50%
     top: 50%
-    height: 65px
-    width: 360px
+    height: 55px
+    width: 300px
     text-align: right
     border-radius: 33px
     background: #c3e6c9
     transform: translate(-50%, -50%)
+    @media screen and (min-width: 1050px)
+      height: 65px
+      width: 360px
   &__selected
     position: absolute
-    left: 25px
-    top: 17px
+    left: 18px
+    top: 12px
     color: #303030
-    font-size: 13px
+    font-size: 12px
     font-weight: 400
     line-height: 16px
+    @media screen and (min-width: 1050px)
+      left: 25px
+      top: 17px
+      font-size: 13px
   &__action
-    padding: 16px 23px 16px 58px
+    padding: 11px 23px 11px 50px
     display: inline-block
     right: -2px
     top: 0
@@ -180,16 +216,77 @@
     position: absolute
     background: #888
     border-radius: 33px
-    font-size: 15px
+    font-size: 12px
     font-weight: 600
     line-height: 33px
     text-transform: uppercase
     font-family: 'Roboto Slab', sans-serif
     box-shadow: 0 2px 18px rgba(0, 0, 0, 0.36)
+    @media screen and (min-width: 1050px)
+      padding: 16px 23px 16px 58px
+      font-size: 15px
   &__lock
     position: absolute
     display: block
-    left: 24px
-    top: 21px
+    left: 20px
+    top: 17px
     width: 18.5px
     height: 22px
+    @media screen and (min-width: 1050px)
+      left: 24px
+      top: 21px
+  &__items
+    @media screen and (max-width: 899px)
+      position: absolute
+      font-size: 0
+      width: 600px
+      left: 50%
+      top: 100%
+      overflow: hidden
+      transform: translateX(-50%)
+    @media screen and (max-width: 629px)
+      padding: 17px 0
+      width: 320px
+  &__item
+    @media screen and (max-width: 899px)
+      display: inline-block
+      position: relative
+      margin: 10px 0
+      width: 290px
+      top: 0 !important
+      line-height: 1.25
+      vertical-align: middle
+      &:nth-child(2n-1)
+        margin-right: 10px
+        right: 0
+      &:nth-child(2n)
+        margin-left: 10px
+        left: 0
+    @media screen and (max-width: 629px)
+      margin: 20px 0
+      width: 310px
+      &::after
+        position: absolute
+        display: block
+        content: ' '
+        left: 50%
+        bottom: -20px
+        width: 100px
+        height: 1px
+        opacity: 0.2
+        background: #00aa6b
+        transform: translateX(-50%)
+      br
+        display: none
+      &:nth-child(2n-1)
+        margin-right: 10px
+        &::after
+          margin-left: 5px
+      &:nth-child(2n)
+        margin-left: 10px
+        &::after
+          margin-left: -5px
+  &__link
+    @media screen and (max-width: 899px)
+      width: auto
+      min-width: 200px

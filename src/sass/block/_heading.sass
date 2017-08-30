@@ -1,10 +1,20 @@
 .heading
+  padding: 0 20px
   color: #303030
-  font-size: 42px
+  font-size: 26px
   font-weight: 600
-  line-height: 46px
+  line-height: 1.1
   text-align: center
   font-family: 'Roboto Slab', sans-serif
+  br
+    display: none
+  @media screen and (min-width: 600px)
+    br
+      display: block
+  @media screen and (min-width: 680px)
+    font-size: 32px
+  @media screen and (min-width: 960px)
+    font-size: 42px
   &--result
     font-size: 65px
     line-height: 36px
