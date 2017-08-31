@@ -28,12 +28,15 @@
     font-size: 14px
     color: #000
     width: 100%
+    outline: none
     line-height: 1.25
     border-radius: 36px
     box-sizing: border-box
     font-family: 'Gotham Pro', sans-serif
     @media screen and (min-width: 480px)
       width: 364px
+  &--error &__field
+    border: 2px solid #6b0000
   &__label
     position: absolute
     display: block
@@ -43,6 +46,8 @@
     line-height: 1
     font-size: 14px
     font-weight: 500
+  &--error &__label
+    color: #6b0000
   &__submit
     padding: 28px 0 27px
     margin: 30px auto
@@ -50,6 +55,7 @@
     width: 100%
     color: #fff
     border: 0
+    outline: none
     line-height: 1
     font-size: 16px
     font-weight: 600
