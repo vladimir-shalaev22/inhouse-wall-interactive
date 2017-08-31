@@ -208,26 +208,34 @@
       top: 17px
       font-size: 13px
   &__action
-    padding: 11px 23px 11px 50px
+    padding: 11px 29px 11px 30px
     display: inline-block
     right: -2px
     top: 0
-    color: #d0d0d0
+    color: #fff
     position: absolute
-    background: #888
     border-radius: 33px
     font-size: 12px
     font-weight: 600
     line-height: 33px
+    text-align: center
     text-transform: uppercase
     font-family: 'Roboto Slab', sans-serif
     box-shadow: 0 2px 18px rgba(0, 0, 0, 0.36)
+    background: linear-gradient(108deg, #00aa6b 0%, #00a9a5 100%)
+    &--locked
+      text-align: left
+      color: #d0d0d0
+      background: #888
+      padding: 11px 23px 11px 50px
     @media screen and (min-width: 1050px)
-      padding: 16px 23px 16px 58px
+      padding: 16px 32px 16px 33px
+      &--locked
+        padding: 16px 23px 16px 58px
       font-size: 15px
   &__lock
     position: absolute
-    display: block
+    display: none
     left: 20px
     top: 17px
     width: 18.5px
@@ -235,6 +243,8 @@
     @media screen and (min-width: 1050px)
       left: 24px
       top: 21px
+  &__action--locked &__lock
+    display: block
   &__items
     @media screen and (max-width: 899px)
       position: absolute

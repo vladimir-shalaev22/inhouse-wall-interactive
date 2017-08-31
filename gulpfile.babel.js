@@ -25,6 +25,7 @@ gulp.task('js', () => {
 
 gulp.task('libs', () => {
   return gulp.src([
+    'node_modules/jquery/dist/jquery.min.js'
   ]).pipe(concat('libs.min.js'))
   .pipe(gulp.dest('public/js'));
 });
