@@ -1,0 +1,53 @@
+.service
+  display: inline-block
+  position: relative
+  width: 112px
+  height: 47px
+  background: #fff
+  border-radius: 2px 3px 3px 2px
+  box-shadow: -1px 2px 13px rgba(0, 0, 0, 0.13)
+  &:not(:first-child)
+    margin-left: 20px
+  &:nth-child(3)
+    margin-left: 0
+    @media screen and (min-width: 500px)
+      margin-left: 20px
+  &:nth-child(4)
+    margin-left: 20px
+    @media screen and (min-width: 500px)
+      margin-left: 0
+    @media screen and (min-width: 680px)
+      margin-left: 20px
+  &:nth-child(4), &:nth-child(5)
+    margin-top: 20px
+    @media screen and (min-width: 680px)
+      margin-top: 0
+  &:nth-child(5)
+    margin-left: 0
+    @media screen and (min-width: 500px)
+      margin-left: 20px
+  &__link
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    background: url('../img/services.png') no-repeat
+  &--mail-ru &__link
+    width: 84px
+    height: 18px
+  &--yandex &__link
+    width: 61px
+    height: 24px
+    background-position: -84px 0
+  &--gmail &__link
+    width: 79px
+    height: 18px
+    background-position: -145px 0
+  &--rambler &__link
+    width: 80px
+    height: 17px
+    background-position: -224px 0
+  &--yahoo &__link
+    width: 73px
+    height: 17px
+    background-position: -304px 0
