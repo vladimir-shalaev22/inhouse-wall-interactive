@@ -1,0 +1,85 @@
+.popup-overlay
+  visibility: hidden
+  position: fixed
+  left: 0
+  top: 0
+  width: 100vw
+  height: 100vh
+  opacity: 0
+  z-index: 1000
+  transition: all ease-out 0.4s
+  background: rgba(255, 255, 255, 0.9)
+  &--visible
+    visibility: visible
+    opacity: 1
+.popup-container
+  visibility: hidden
+  position: fixed
+  left: 0
+  top: 0
+  width: 100vw
+  height: 100vh
+  overflow: auto
+  z-index: 1100
+  &--visible
+    visibility: visible
+.popup
+  visibility: hidden
+  position: fixed
+  z-index: 1200
+  left: 50%
+  top: 50%
+  max-width: 600px
+  width: 100%
+  opacity: 0
+  background: #fff
+  padding: 30px 25px
+  box-sizing: border-box
+  border-radius: 5px
+  transform: translate(-50%, -50%)
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1)
+  transition: all ease-out 0.4s
+  &--open
+    visibility: visible
+    opacity: 1
+  &__inner
+    padding-right: 10px
+    margin-top: 15px
+    height: 320px
+    overflow: auto
+    @media screen and (min-width: 768px)
+      height: 460px
+  &__title
+    color: #202020
+    font-size: 18px
+    line-height: 1.25
+    font-weight: 600
+    font-family: 'Roboto Slab', sans-serif
+  &__text
+    margin: 14px 0
+    color: #404040
+    font-size: 14px
+    line-height: 1.5
+    &--strong
+      font-weight: 500
+  &__heading
+    color: #202020
+    font-size: 16px
+    line-height: 1.25
+    font-weight: 500
+    font-family: 'Roboto Slab', sans-serif
+  &__close
+    position: absolute
+    right: 20px
+    top: 15px
+    width: 32px
+    height: 32px
+    opacity: 0.8
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyOTQuODQzIDI5NC44NDMiIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIj48ZyBmaWxsPSIjYjAyNTI1Ij48cGF0aCBkPSJNMTQ3LjQyMSAwQzY2LjEzMyAwIDAgNjYuMTMzIDAgMTQ3LjQyMXM2Ni4xMzMgMTQ3LjQyMSAxNDcuNDIxIDE0Ny40MjFjMzguMjg3IDAgNzQuNTY3LTE0LjYwOSAxMDIuMTU5LTQxLjEzNmE2IDYgMCAxIDAtOC4zMTYtOC42NWMtMjUuMzQ1IDI0LjM2Ny01OC42NzIgMzcuNzg2LTkzLjg0MiAzNy43ODZDNzIuNzUgMjgyLjg0MyAxMiAyMjIuMDkzIDEyIDE0Ny40MjFTNzIuNzUgMTIgMTQ3LjQyMSAxMnMxMzUuNDIxIDYwLjc1IDEzNS40MjEgMTM1LjQyMWMwIDE2Ljg0Mi0zLjA1MiAzMy4yNzMtOS4wNzEgNDguODM1YTYgNiAwIDAgMCAxMS4xOTMgNC4zMjljNi41NTUtMTYuOTQ5IDkuODc5LTM0LjgzNiA5Ljg3OS01My4xNjVDMjk0Ljg0MyA2Ni4xMzMgMjI4LjcxIDAgMTQ3LjQyMSAweiIvPjxwYXRoIGQ9Ik0xNjcuNjE5IDE2MC4xMzRhNiA2IDAgMCAwLTguMzk1IDguNTc1bDQ3LjIzNiA0Ni4yMzZhNS45ODEgNS45ODEgMCAwIDAgNC4xOTcgMS43MTIgNi4wMDEgNi4wMDEgMCAwIDAgNC4xOTgtMTAuMjg4bC00Ny4yMzYtNDYuMjM1ek0xMjUuMTc4IDEzMy42NjNjMS4xNzEgMS4xNzEgMi43MDcgMS43NTcgNC4yNDMgMS43NTdzMy4wNzEtLjU4NiA0LjI0My0xLjc1N2E2IDYgMCAwIDAgMC04LjQ4NUw4OC40MjggNzkuOTQyYTYgNiAwIDAgMC04LjQ4NSA4LjQ4NWw0NS4yMzUgNDUuMjM2ek0yMTQuOSA3OS45NDJhNiA2IDAgMCAwLTguNDg1IDBMNzkuOTQyIDIwNi40MTVhNiA2IDAgMSAwIDguNDg2IDguNDg1TDIxNC45IDg4LjQyOGE2LjAwMSA2LjAwMSAwIDAgMCAwLTguNDg2eiIvPjwvZz48L3N2Zz4=')
+    background-size: contain
+    transition: all ease-out 0.3s
+    &:hover
+      opacity: 1
+      transform: scale(1.2)
+  strong
+    font-weight: 500

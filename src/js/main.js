@@ -38,7 +38,6 @@ $(function initApp() {
   let listItems = $('.items-list__item').hide();
   let tableRows = $('.data__item').hide();
   let counterButtonText = $('#button-text');
-  let counterTextEl = $('.circle__selected');
   let counterButton = $('.circle__action');
   let resultBlocks = $('.screen--result, .footer').hide();
   let interactiveBlock = $('.screen--interactive');
@@ -62,7 +61,6 @@ $(function initApp() {
       selectedCount = freshCount(count, isChecked);
       isChecked = freshStatus(count, isChecked);
       circlePoint.attr('class', circlePointClass(isChecked));
-      counterTextEl.html(counterText(selectedCount));
       counterButtonText.text(buttonText(selectedCount));
       counterButton.attr('class', buttonClass(selectedCount));
       listItems.eq(targetIndex[index][0]).css('display', displayItem(isChecked));
@@ -115,7 +113,6 @@ $(function initApp() {
       listItems.hide();
       tableRows.hide();
       selectedCount = 0;
-      counterTextEl.html(counterText(selectedCount));
       counterButtonText.text(buttonText(selectedCount));
       counterButton.attr('class', buttonClass(selectedCount));
       $(window).trigger('clear-items');
@@ -124,5 +121,46 @@ $(function initApp() {
       $(window).scrollTop(0);
     }, 500);
   });
+
+  function openPopup(target) {
+    let overlay = $('.popup-overlay');
+    let container = $('.popup-container');
+    let popup = $(target);
+
+    function closePopup() {
+      overlay.removeClass('popup-overlay--visible');
+      container.removeClass('popup-container--visible');
+      popup.removeClass('popup--open');
+    }
+
+    container.click(closePopup);
+
+    popup.click(function (event) {
+      return false;
+    });
+
+    popup.find('.popup__close').click(function (event) {
+      event.preventDefault();
+      closePopup();
+    });
+
+    $(window).keydown(function (event) {
+      if (event.originalEvent.keyCode === 27) {
+        closePopup();
+      }
+    });
+
+    overlay.addClass('popup-overlay--visible');
+    container.addClass('popup-container--visible');
+    popup.addClass('popup--open');
+  }
+
+  $('.js-popup').click(function (event) {
+    let target = $(this).attr('href');
+    event.preventDefault();
+    openPopup(target);
+  });
+
+  $('.js-scroll').smoothScroll();
 
 });

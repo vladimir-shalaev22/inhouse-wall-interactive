@@ -25,7 +25,8 @@ gulp.task('js', () => {
 
 gulp.task('libs', () => {
   return gulp.src([
-    'node_modules/jquery/dist/jquery.min.js'
+    'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/jquery-smooth-scroll/jquery.smooth-scroll.min.js'
   ]).pipe(concat('libs.min.js'))
   .pipe(gulp.dest('public/js'));
 });
