@@ -1,0 +1,65 @@
+.success
+  padding: 20px 15px
+  position: relative
+  color: #fff
+  box-sizing: border-box
+  background: linear-gradient(108deg, #00aa6b 0%, #00a9a6 100%)
+  @media screen and (min-width: 480px)
+    padding: 30px 45px
+    margin: 15px
+  @media screen and (min-width: 960px)
+    padding: 50px 88px
+  @media screen and (min-width: 1141px)
+    position: absolute
+    margin: 0
+    left: 50%
+    top: 50%
+    width: 1141px
+    transform: translate(-50%, -50%)
+  &::after
+    position: absolute
+    display: none
+    content: ' '
+    right: -2.6292%
+    bottom: 0
+    width: 42.6818%
+    height: 135.8974%
+    background: url('../img/alexey.png') bottom no-repeat
+    background-size: contain
+    @media screen and (min-width: 1141px)
+      display: block
+      width: 487px
+      height: 530px
+  &__title
+    font-size: 26px
+    line-height: 1
+    font-weight: 600
+    font-family: 'Roboto Slab', sans-serif
+    @media screen and (min-width: 480px)
+      font-size: 35px
+  &__text
+    margin-top: 18px
+    max-width: 560px
+    font-size: 18px
+    font-weight: 500
+    line-height: 1.5
+    &--important
+      position: relative
+      padding-left: 71px
+      opacity: 0.7
+  &__text--important &__icon
+    position: absolute
+    left: 0
+    top: 5px
+    width: 50px
+    height: 43px
+    fill: #fff
+  .service
+    margin-top: 10px
+    margin-bottom: 10px
+    &:nth-child(4)
+      margin-left: 20px
+      @media screen and (min-width: 500px)
+        margin-left: 0
+      @media screen and (min-width: 770px)
+        margin-left: 20px
