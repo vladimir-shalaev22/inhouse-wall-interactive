@@ -47,6 +47,10 @@ $(function initApp() {
     [5, 0], [6, 9], [0, 1], [2, 8], [7, 2], [3, 7], [8, 3], [1, 6], [4, 4], [9, 5]
   ];
 
+  if ($('body').data('page') === 'confirm') {
+    $('.footer').show();
+  }
+
   $('.circle__item').each(function initItem(index) {
     let circlePoint = $(this).find('.circle__point');
     let isChecked = false;
