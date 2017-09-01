@@ -165,6 +165,8 @@ $(function initApp() {
     openPopup(target);
   });
 
-  $('.js-scroll').smoothScroll();
+  $('.js-scroll').smoothScroll({
+    speed: 800
+  });
 
 });
